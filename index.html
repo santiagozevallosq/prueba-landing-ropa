@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA LIMA | Moda Contemporánea & Algodón Pima Peruano</title>
+    <meta name="description" content="Tienda online de ropa contemporánea en Lima, Perú. Confeccionada con el más suave Algodón Pima peruano y lino premium. Envíos express en Lima y todo el Perú.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        aura: {
+                            50: '#FBF9F7',
+                            100: '#F5F1EB',
+                            200: '#EAE1D5',
+                            300: '#D9C7B2',
+                            400: '#C2A789',
+                            500: '#A98762',
+                            600: '#8C6C47',
+                            700: '#6E5235',
+                            800: '#4A3723',
+                            900: '#1F170E',
+                            950: '#120D08'
+                        },
+                        peru: {
+                            red: '#D92A2A',
+                            gold: '#C59B27',
+                            yape: '#742384',
+                            plin: '#00D1D2'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .backdrop-blur-nav {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-[#FAF8F5] text-zinc-900 font-sans antialiased selection:bg-aura-300 selection:text-aura-950">
+
+    <!-- BARRA SUPERIOR DE ANUNCIOS -->
+    <div class="bg-zinc-950 text-zinc-200 text-xs tracking-wider py-2.5 px-4 text-center border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <span class="hidden md:inline-block text-zinc-400 font-medium">📍 Showroom: Av. Conquistadores 410, San Isidro - Lima</span>
+            <p class="mx-auto md:mx-0 font-medium text-center">
+                ✨ <span class="text-aura-300 font-semibold">COLECCIÓN OTOÑO 2026</span> • Envíos <span class="underline decoration-aura-400 font-semibold">GRATIS</span> a todo Lima por compras mayores a S/. 199 • Paga con Yape y Plin
+            </p>
+            <div class="hidden lg:flex items-center gap-4 text-zinc-400">
+                <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-aura-400"></i> Compra 100% Segura</span>
+                <span>|</span>
+                <span class="font-bold text-white">PEN S/.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR PRINCIPAL -->
+    <header class="sticky top-0 z-40 bg-[#FAF8F5]/90 backdrop-blur-nav border-b border-zinc-200/80 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Botón Menú Mobile -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-zinc-800 hover:text-black focus:outline-none" aria-label="Abrir Menú">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+
+                <!-- Menú Navegación Desktop -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium tracking-wide uppercase text-zinc-700">
+                    <a href="#novedades" class="hover:text-aura-700 transition-colors">Novedades</a>
+                    <a href="#catalogo" class="hover:text-aura-700 transition-colors">Mujer</a>
+                    <a href="#catalogo" class="hover:text-aura-700 transition-colors">Hombre</a>
+                    <a href="#pima" class="hover:text-aura-700 transition-colors font-semibold text-aura-800 flex items-center gap-1">
+                        <span class="w-2 h-2 rounded-full bg-peru-gold animate-pulse"></span> Esenciales Pima
+                    </a>
+                    <a href="#lookbook" class="hover:text-aura-700 transition-colors">Lookbook Lima</a>
+                    <a href="#contacto" class="hover:text-aura-700 transition-colors">Nosotros</a>
+                </nav>
+
+                <!-- Logo Central -->
+                <div class="flex flex-col items-center justify-center text-center">
+                    <a href="#" class="inline-flex flex-col items-center">
+                        <span class="font-serif text-2xl sm:text-3xl tracking-[0.25em] font-bold text-zinc-950 uppercase">AURA</span>
+                        <span class="text-[9px] tracking-[0.45em] text-aura-700 font-semibold uppercase -mt-1">L I M A</span>
+                    </a>
+                </div>
+
+                <!-- Acciones Derecha -->
+                <div class="flex items-center space-x-3 sm:space-x-5 text-zinc-800">
+                    <button class="p-2 hover:text-aura-700 transition-colors" title="Buscar prendas" onclick="document.getElementById('catalogo').scrollIntoView({behavior: 'smooth'})">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </button>
+                    <a href="https://wa.me/51999999999?text=Hola%20AURA%20LIMA,%20quisiera%20asesor%C3%ADa%20para%20una%20prenda" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition-colors">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                        <span>Asesoría Lima</span>
+                    </a>
+                    <!-- Carrito Drawer Trigger -->
+                    <button id="openCartBtn" class="relative p-2.5 rounded-full bg-zinc-100 hover:bg-zinc-200 transition-colors text-zinc-900 flex items-center justify-center">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        <span id="cartCountBadge" class="absolute -top-1 -right-1 w-5 h-5 bg-zinc-950 text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow-md">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Mobile Desplegable -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-zinc-200 bg-[#FAF8F5] px-6 py-5 shadow-xl">
+            <nav class="flex flex-col space-y-4 text-base font-medium text-zinc-800">
+                <a href="#novedades" class="hover:text-aura-700 transition-colors py-1">Novedades 2026</a>
+                <a href="#catalogo" class="hover:text-aura-700 transition-colors py-1">Colección Mujer</a>
+                <a href="#catalogo" class="hover:text-aura-700 transition-colors py-1">Colección Hombre</a>
+                <a href="#pima" class="hover:text-aura-700 transition-colors py-1 font-semibold text-aura-800 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-peru-gold"></span> 100% Algodón Pima Peruano
+                </a>
+                <a href="#lookbook" class="hover:text-aura-700 transition-colors py-1">Lookbook en Lima</a>
+                <a href="#contacto" class="hover:text-aura-700 transition-colors py-1">Envíos & Pagos (Yape/Plin)</a>
+                <div class="pt-3 border-t border-zinc-200 flex flex-col gap-2">
+                    <p class="text-xs text-zinc-500 font-medium">Showroom en San Isidro, Lima</p>
+                    <a href="https://wa.me/51999999999" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-emerald-600 text-white font-medium text-sm flex items-center justify-center gap-2 shadow-sm">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> Pedir por WhatsApp
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO PRINCIPAL -->
+        <section class="relative overflow-hidden bg-gradient-to-b from-[#F5F0E8] to-[#FAF8F5] pt-10 pb-20 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Columna de Texto -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-aura-200/60 border border-aura-300/80 text-aura-900 text-xs uppercase tracking-widest font-semibold">
+                            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-aura-700"></i>
+                            Hecho en Lima con Algodón Pima de Exportación
+                        </div>
+
+                        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-6xl tracking-tight text-zinc-950 leading-[1.12]">
+                            Elegancia sin esfuerzo <br class="hidden sm:inline">
+                            para el ritmo de <span class="italic font-normal text-aura-800">Lima</span>.
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-zinc-600 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                            Diseñamos prendas contemporáneas, frescas y duraderas. Confeccionadas con el mejor <strong class="text-zinc-900 font-semibold">Algodón Pima Peruano de fibra extra larga</strong>, lino natural y cortes pensados para el clima de nuestra ciudad.
+                        </p>
+
+                        <!-- Botones CTA -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#catalogo" class="w-full sm:w-auto px-8 py-4 rounded-full bg-zinc-950 text-white hover:bg-zinc-800 text-sm font-semibold tracking-wider uppercase transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                                <span>Ver Colección 2026</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                            <a href="https://wa.me/51999999999?text=Hola,%20me%20gustar%C3%ADa%20ver%20el%20cat%C3%A1logo%20disponible" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-full bg-white border border-zinc-300 text-zinc-800 hover:bg-zinc-50 text-sm font-semibold tracking-wide transition-all shadow-sm flex items-center justify-center gap-2.5">
+                                <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                                <span>Catálogo por WhatsApp</span>
+                            </a>
+                        </div>
+
+                        <!-- Micro Beneficios / Confianza Local -->
+                        <div class="pt-8 border-t border-zinc-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                            <div>
+                                <p class="font-serif text-2xl font-bold text-zinc-900">24-48h</p>
+                                <p class="text-xs text-zinc-500 font-medium">Entrega en Lima Metropolitana</p>
+                            </div>
+                            <div>
+                                <p class="font-serif text-2xl font-bold text-zinc-900">100% Pima</p>
+                                <p class="text-xs text-zinc-500 font-medium">Suavidad y fibra extra larga</p>
+                            </div>
+                            <div>
+                                <p class="font-serif text-2xl font-bold text-zinc-900">Yape & Plin</p>
+                                <p class="text-xs text-zinc-500 font-medium">Pagos directos al instante</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Visual Hero / Showcase de Ropa -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <!-- Card Principal Imagen -->
+                            <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-zinc-100 aspect-[4/5] border-4 border-white">
+                                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85" alt="Moda contemporánea Lima AURA" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                
+                                <div class="absolute bottom-6 left-6 right-6 text-white">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-semibold uppercase tracking-wider">Nueva Temporada</span>
+                                        <span class="px-2.5 py-1 rounded-full bg-emerald-500/90 text-white text-[11px] font-semibold">Stock Inmediato</span>
+                                    </div>
+                                    <h3 class="font-serif text-2xl font-bold">Vestido Terracota Lino & Pima</h3>
+                                    <p class="text-sm text-zinc-200">S/. 179.00 • Disponible en tallas S, M, L</p>
+                                </div>
+                            </div>
+
+                            <!-- Floating badge flotante 1: Origen Pima -->
+                            <div class="absolute -top-4 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-zinc-100 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold">
+                                    <i data-lucide="feather" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-zinc-900 leading-none">Algodón Pima 100%</p>
+                                    <p class="text-[10px] text-zinc-500 mt-1">Confección en talleres peruanos</p>
+                                </div>
+                            </div>
+
+                            <!-- Floating badge flotante 2: Métodos de pago locales -->
+                            <div class="absolute -bottom-5 -right-4 sm:-right-6 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-zinc-100 flex items-center gap-3">
+                                <div class="flex items-center -space-x-1.5">
+                                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-purple-700 text-white font-extrabold text-[10px] shadow">Y</span>
+                                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-cyan-500 text-white font-extrabold text-[10px] shadow">P</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-zinc-900">Aceptamos Yape y Plin</p>
+                                    <p class="text-[10px] text-zinc-500">Sin comisiones adicionales</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CATEGORÍAS RÁPIDAS -->
+        <section class="py-16 bg-white border-y border-zinc-200/60" id="novedades">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest font-semibold text-aura-700">Explora por Estilo</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-zinc-950 mt-1">Categorías Esenciales</h2>
+                    </div>
+                    <p class="text-sm text-zinc-500 mt-2 md:mt-0 max-w-sm">Piezas versátiles pensadas para el clima húmedo de Lima y ocasiones casuales o formales.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                    <!-- Categoría 1 -->
+                    <div class="group relative rounded-2xl overflow-hidden aspect-[3/4] bg-zinc-100 cursor-pointer" onclick="filterCatalog('mujer')">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Blusas y Tops Lima" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[11px] uppercase tracking-wider text-aura-300 font-semibold">Tendencia</span>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold">Blusas & Tops</h3>
+                            <span class="text-xs text-zinc-300 group-hover:underline flex items-center gap-1 mt-1">Ver prendas <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 2 -->
+                    <div class="group relative rounded-2xl overflow-hidden aspect-[3/4] bg-zinc-100 cursor-pointer" onclick="filterCatalog('pima')">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Polos Oversized Algodón Pima" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[11px] uppercase tracking-wider text-amber-300 font-semibold">100% Pima</span>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold">Polos & Básicos</h3>
+                            <span class="text-xs text-zinc-300 group-hover:underline flex items-center gap-1 mt-1">Ver prendas <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 3 -->
+                    <div class="group relative rounded-2xl overflow-hidden aspect-[3/4] bg-zinc-100 cursor-pointer" onclick="filterCatalog('hombre')">
+                        <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=600&q=80" alt="Pantalones de Lino y Denim" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[11px] uppercase tracking-wider text-aura-300 font-semibold">Hombre & Unisex</span>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold">Lino & Pantalones</h3>
+                            <span class="text-xs text-zinc-300 group-hover:underline flex items-center gap-1 mt-1">Ver prendas <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 4 -->
+                    <div class="group relative rounded-2xl overflow-hidden aspect-[3/4] bg-zinc-100 cursor-pointer" onclick="filterCatalog('abrigos')">
+                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=600&q=80" alt="Casacas y Chompas Lima" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[11px] uppercase tracking-wider text-rose-300 font-semibold">Media Estación</span>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold">Casacas & Tejidos</h3>
+                            <span class="text-xs text-zinc-300 group-hover:underline flex items-center gap-1 mt-1">Ver prendas <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CATÁLOGO DE PRODUCTOS (INTERACTIVO) -->
+        <section class="py-20 bg-[#FAF8F5]" id="catalogo">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Título y Filtros -->
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-xs uppercase tracking-widest font-semibold text-aura-700">Prendas Seleccionadas</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-zinc-950 mt-1">Catálogo Destacado</h2>
+                    <p class="text-sm text-zinc-600 mt-2">Haz clic en cualquier prenda para elegir tu talla y agregarla al pedido.</p>
+                </div>
+
+                <!-- Botones de Filtro -->
+                <div class="flex items-center justify-center flex-wrap gap-2 sm:gap-3 mb-12">
+                    <button onclick="filterCatalog('todos')" class="filter-btn active px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-zinc-950 text-white shadow" data-category="todos">
+                        Todos (8)
+                    </button>
+                    <button onclick="filterCatalog('mujer')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-white border border-zinc-200 text-zinc-700 hover:border-zinc-400" data-category="mujer">
+                        Mujer
+                    </button>
+                    <button onclick="filterCatalog('hombre')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-white border border-zinc-200 text-zinc-700 hover:border-zinc-400" data-category="hombre">
+                        Hombre
+                    </button>
+                    <button onclick="filterCatalog('pima')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-white border border-zinc-200 text-zinc-700 hover:border-zinc-400" data-category="pima">
+                        Algodón Pima 100%
+                    </button>
+                    <button onclick="filterCatalog('abrigos')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-white border border-zinc-200 text-zinc-700 hover:border-zinc-400" data-category="abrigos">
+                        Casacas & Tejidos
+                    </button>
+                </div>
+
+                <!-- Grid de Productos -->
+                <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                    <!-- Los productos se inyectan dinámicamente con JavaScript para permitir interactividad con el carrito -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DIFERENCIAL: EL VALOR DEL ALGODÓN PIMA -->
+        <section class="py-20 bg-zinc-950 text-white relative overflow-hidden" id="pima">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-aura-900/80 border border-aura-700 text-aura-300 text-xs uppercase tracking-widest font-semibold">
+                            Tradición Textil Peruana
+                        </div>
+                        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                            ¿Por qué nuestras prendas son diferentes?
+                        </h2>
+                        <p class="text-zinc-300 text-base leading-relaxed">
+                            El algodón Pima del norte del Perú es mundialmente reconocido por su fibra extra larga (ELS). Esto le otorga una suavidad insuperable, una caída elegante y una resistencia que no hace pelotitas (pilling) con los lavados continuos.
+                        </p>
+                        
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-aura-800/50 border border-aura-700 flex items-center justify-center shrink-0 text-aura-300 mt-1">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white text-sm">Respirabilidad ideal para Lima</h4>
+                                    <p class="text-xs text-zinc-400 mt-0.5">Mantiene tu cuerpo fresco en el calor de mediodía y abrigado con la brisa nocturna.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-aura-800/50 border border-aura-700 flex items-center justify-center shrink-0 text-aura-300 mt-1">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white text-sm">Tintes ecológicos y pre-lavado</h4>
+                                    <p class="text-xs text-zinc-400 mt-0.5">Nuestras prendas no encogen ni pierden su intensidad tras lavar en casa.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-aura-800/50 border border-aura-700 flex items-center justify-center shrink-0 text-aura-300 mt-1">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white text-sm">Comercio Justo y Producción Local</h4>
+                                    <p class="text-xs text-zinc-400 mt-0.5">Confeccionado por artesanos y costureros peruanos remunerados justamente.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <button onclick="filterCatalog('pima')" class="px-6 py-3.5 rounded-full bg-aura-400 hover:bg-aura-300 text-zinc-950 font-bold text-xs uppercase tracking-wider transition-all">
+                                Explorar Prendas 100% Pima
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80" alt="Detalle Algodón Pima" class="rounded-2xl w-full h-64 object-cover shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=600&q=80" alt="Prendas de ropa de calidad" class="rounded-2xl w-full h-64 object-cover shadow-lg translate-y-6">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN LOOKBOOK URBANO LIMA -->
+        <section class="py-20 bg-white" id="lookbook">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-xl mx-auto mb-14">
+                    <span class="text-xs uppercase tracking-widest font-semibold text-aura-700">Comunidad & Streetwear</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-zinc-950 mt-1">AURA por las Calles de Lima</h2>
+                    <p class="text-sm text-zinc-500 mt-2">Así visten nuestras piezas en Barranco, Miraflores, San Isidro y el Centro Histórico.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+                    <div class="group relative rounded-xl overflow-hidden aspect-[4/5] bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=500&q=80" alt="Look Lima 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                            <span class="text-[11px] text-white font-medium">📍 Barranco</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-xl overflow-hidden aspect-[4/5] bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=500&q=80" alt="Look Lima 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                            <span class="text-[11px] text-white font-medium">📍 Miraflores</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-xl overflow-hidden aspect-[4/5] bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Look Lima 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                            <span class="text-[11px] text-white font-medium">📍 San Isidro</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-xl overflow-hidden aspect-[4/5] bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80" alt="Look Lima 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                            <span class="text-[11px] text-white font-medium">📍 Surco</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-xl overflow-hidden aspect-[4/5] bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80" alt="Look Lima 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                            <span class="text-[11px] text-white font-medium">📍 Malecón</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-xl overflow-hidden aspect-[4/5] bg-zinc-100">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Look Lima 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                            <span class="text-[11px] text-white font-medium">📍 San Borja</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <p class="text-xs text-zinc-500 font-medium">¿Llevas puesta una prenda AURA? Etiquétanos en Instagram <a href="#" class="text-zinc-900 font-bold hover:underline">@auralima.pe</a> para aparecer en nuestro muro.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS REALES EN LIMA -->
+        <section class="py-16 bg-[#F5F1EB] border-t border-zinc-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <span class="text-xs uppercase tracking-widest font-semibold text-aura-700">Opiniones Verificadas</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-zinc-950">Lo que dicen en Lima de nosotros</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-zinc-200/70">
+                        <div class="flex text-amber-400 mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-zinc-700 text-sm italic mb-4">"El polo Pima oversized es simplemente otro nivel. La suavidad no se compara con nada comercial de centro comercial. Me llegó al día siguiente a Miraflores."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-full bg-aura-200 text-aura-900 font-bold flex items-center justify-center text-xs">CR</div>
+                            <div>
+                                <p class="text-xs font-bold text-zinc-900">Camila Romero</p>
+                                <p class="text-[11px] text-zinc-500">Miraflores, Lima • Compra verificada</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-zinc-200/70">
+                        <div class="flex text-amber-400 mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-zinc-700 text-sm italic mb-4">"Pagué al toque con Yape y la atención por WhatsApp fue súper rápida con la guía de tallas. El pantalón de lino tiene una caída increíble."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-full bg-aura-200 text-aura-900 font-bold flex items-center justify-center text-xs">MV</div>
+                            <div>
+                                <p class="text-xs font-bold text-zinc-900">Mateo Valdivia</p>
+                                <p class="text-[11px] text-zinc-500">San Isidro, Lima • Compra verificada</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-zinc-200/70">
+                        <div class="flex text-amber-400 mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-zinc-700 text-sm italic mb-4">"El empaque de regalo venía perfumado y con notas muy cuidadas. Da gusto comprar marcas peruanas que cuidan tanto la calidad de la tela."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-full bg-aura-200 text-aura-900 font-bold flex items-center justify-center text-xs">LR</div>
+                            <div>
+                                <p class="text-xs font-bold text-zinc-900">Luciana Ramos</p>
+                                <p class="text-[11px] text-zinc-500">Surco, Lima • Compra verificada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER DE ENVÍOS & MEDIOS DE PAGO LOCALES -->
+        <section class="py-16 bg-white border-y border-zinc-200" id="contacto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-zinc-100 flex items-center justify-center text-zinc-900 shrink-0">
+                            <i data-lucide="truck" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-zinc-900">Envíos a todo Lima</h4>
+                            <p class="text-xs text-zinc-500 mt-1">Llegamos a todos los distritos en 24 a 48 horas con Olva Courier o motorizado propio.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-700 shrink-0 font-black text-lg">
+                            Y/P
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-zinc-900">Yape, Plin y Tarjetas</h4>
+                            <p class="text-xs text-zinc-500 mt-1">Transfiere directo sin cobros extra, o paga con tarjeta de crédito/débito de forma 100% segura.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-zinc-100 flex items-center justify-center text-zinc-900 shrink-0">
+                            <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-zinc-900">Cambios sin estrés</h4>
+                            <p class="text-xs text-zinc-500 mt-1">Hasta 7 días para cambios de talla en Lima Metropolitana o en nuestro showroom.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-700 shrink-0">
+                            <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-zinc-900">Atención WhatsApp</h4>
+                            <p class="text-xs text-zinc-500 mt-1">Te asesoramos con medidas exactas y fotos reales al instante de Lun a Sáb.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER / DESCUENTO PRIMERA COMPRA -->
+        <section class="py-16 bg-[#FBF9F7] text-center border-b border-zinc-200">
+            <div class="max-w-2xl mx-auto px-4">
+                <span class="text-xs uppercase tracking-widest font-semibold text-aura-700">Beneficio Exclusivo</span>
+                <h3 class="font-serif text-3xl font-bold text-zinc-950 mt-1">Obtén S/. 20 de descuento en tu primer pedido</h3>
+                <p class="text-sm text-zinc-600 mt-2 mb-6">Regístrate para enterarte antes que nadie de reposiciones de tallas y drops exclusivos.</p>
+                
+                <form id="newsletterForm" onsubmit="handleNewsletter(event)" class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                    <input type="email" required placeholder="Ingresa tu correo electrónico..." class="px-5 py-3.5 rounded-full border border-zinc-300 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-900 grow">
+                    <button type="submit" class="px-7 py-3.5 rounded-full bg-zinc-950 hover:bg-zinc-800 text-white font-semibold text-xs uppercase tracking-wider transition-colors shadow">
+                        Suscribirme
+                    </button>
+                </form>
+                <p id="newsletterMsg" class="hidden text-xs text-emerald-600 font-medium mt-3">¡Listo! Te enviamos tu cupón <strong class="underline">LIMA20</strong> a tu bandeja.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 text-zinc-400 text-xs py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-zinc-800">
+                
+                <!-- Columna 1: Marca -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#" class="inline-flex flex-col">
+                        <span class="font-serif text-2xl tracking-[0.25em] font-bold text-white uppercase">AURA</span>
+                        <span class="text-[9px] tracking-[0.45em] text-aura-400 font-semibold uppercase -mt-1">L I M A</span>
+                    </a>
+                    <p class="text-zinc-400 text-xs max-w-sm leading-relaxed">
+                        Concept store y marca de ropa de diseño independiente en Lima, Perú. Confeccionamos básicos de lujo y prendas modernas en 100% Algodón Pima Peruano.
+                    </p>
+                    <div class="flex items-center space-x-4 pt-2 text-zinc-400">
+                        <a href="#" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-white hover:text-black flex items-center justify-center transition-colors" title="Instagram">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-white hover:text-black flex items-center justify-center transition-colors" title="TikTok">
+                            <i data-lucide="video" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/51999999999" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors" title="WhatsApp">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Navegación -->
+                <div>
+                    <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-4">Colección</h5>
+                    <ul class="space-y-2.5">
+                        <li><a href="#catalogo" class="hover:text-white transition">Novedades 2026</a></li>
+                        <li><a href="#catalogo" class="hover:text-white transition">Polos Pima Oversized</a></li>
+                        <li><a href="#catalogo" class="hover:text-white transition">Pantalones & Lino</a></li>
+                        <li><a href="#catalogo" class="hover:text-white transition">Vestidos & Faldas</a></li>
+                        <li><a href="#catalogo" class="hover:text-white transition">Casacas de Invierno</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Información & Ayuda -->
+                <div>
+                    <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-4">Servicio al Cliente</h5>
+                    <ul class="space-y-2.5">
+                        <li><a href="#" class="hover:text-white transition">Guía de Tallas para Lima</a></li>
+                        <li><a href="#" class="hover:text-white transition">Tiempos y Costos de Envío</a></li>
+                        <li><a href="#" class="hover:text-white transition">Política de Cambios y Devoluciones</a></li>
+                        <li><a href="#" class="hover:text-white transition">Preguntas Frecuentes</a></li>
+                        <li>
+                            <a href="#" class="flex items-center gap-1.5 hover:text-white transition text-zinc-300">
+                                <i data-lucide="book-open" class="w-3.5 h-3.5 text-aura-400"></i>
+                                <span>Libro de Reclamaciones</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto Local -->
+                <div>
+                    <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-4">Contacto Lima</h5>
+                    <ul class="space-y-2.5 text-zinc-400">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-aura-400 shrink-0 mt-0.5"></i>
+                            <span>Av. Conquistadores 410, San Isidro, Lima - Perú</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-aura-400 shrink-0"></i>
+                            <span>+51 999 999 999</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-aura-400 shrink-0"></i>
+                            <span>hola@auralima.pe</span>
+                        </li>
+                        <li class="text-[11px] text-zinc-500 pt-1">
+                            Horario Showroom: Lun a Sáb 10:30 am - 8:00 pm
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright & Medios de Pago -->
+            <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-zinc-500 text-[11px]">
+                <p>© 2026 AURA LIMA S.A.C. - RUC 20601234567. Todos los derechos reservados. Diseñado y confeccionado en Lima, Perú.</p>
+                <div class="flex items-center gap-3">
+                    <span class="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-white font-bold text-[10px]">YAPE</span>
+                    <span class="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-cyan-400 font-bold text-[10px]">PLIN</span>
+                    <span class="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-white font-bold text-[10px]">VISA</span>
+                    <span class="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-white font-bold text-[10px]">MASTERCARD</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SLIDE-OVER DRAWER DEL CARRITO DE COMPRAS -->
+    <div id="cartModal" class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-opacity duration-300 opacity-0">
+        <!-- Backdrop -->
+        <div id="cartBackdrop" class="absolute inset-0 bg-black/60 transition-opacity"></div>
+
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div id="cartPanel" class="w-screen max-w-md bg-white shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 pointer-events-auto">
+                
+                <!-- Encabezado Carrito -->
+                <div class="p-6 border-b border-zinc-200 flex items-center justify-between bg-zinc-50">
+                    <div class="flex items-center gap-2.5">
+                        <i data-lucide="shopping-bag" class="w-5 h-5 text-zinc-900"></i>
+                        <h3 class="font-serif text-lg font-bold text-zinc-950">Tu Carrito de Compras</h3>
+                        <span id="drawerBadgeCount" class="text-xs bg-zinc-200 text-zinc-800 px-2 py-0.5 rounded-full font-bold">0</span>
+                    </div>
+                    <button id="closeCartBtn" class="p-2 text-zinc-400 hover:text-black">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <!-- Notificación de Envío Gratis -->
+                <div id="freeShippingBar" class="bg-aura-100/70 px-6 py-2.5 text-xs text-aura-900 border-b border-aura-200 flex items-center justify-between">
+                    <span id="freeShippingText">Agrega prendas para envío gratis en Lima</span>
+                    <i data-lucide="truck" class="w-4 h-4 text-aura-700"></i>
+                </div>
+
+                <!-- Lista de Productos en Carrito -->
+                <div id="cartItemsList" class="flex-1 overflow-y-auto p-6 space-y-4">
+                    <!-- Items dinámicos -->
+                </div>
+
+                <!-- Footer Carrito / Totales y Checkout -->
+                <div class="p-6 border-t border-zinc-200 bg-zinc-50 space-y-4">
+                    <div class="space-y-1.5 text-sm">
+                        <div class="flex justify-between text-zinc-600">
+                            <span>Subtotal:</span>
+                            <span id="cartSubtotal" class="font-semibold text-zinc-900">S/. 0.00</span>
+                        </div>
+                        <div class="flex justify-between text-zinc-600 text-xs">
+                            <span>Envío en Lima:</span>
+                            <span id="cartShippingText" class="text-emerald-700 font-medium">Calculado al checkout</span>
+                        </div>
+                        <div class="flex justify-between text-base font-bold text-zinc-950 pt-2 border-t border-zinc-200">
+                            <span>Total estimado:</span>
+                            <span id="cartTotal" class="text-lg">S/. 0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Botón de compra por WhatsApp con desglose del pedido -->
+                    <button onclick="checkoutViaWhatsApp()" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg transition-all hover:shadow-emerald-600/30">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Confirmar Pedido por WhatsApp</span>
+                    </button>
+
+                    <button onclick="checkoutDirecto()" class="w-full py-3 rounded-xl bg-zinc-950 hover:bg-zinc-800 text-white font-semibold text-xs tracking-wider uppercase transition-colors">
+                        Pagar con Tarjeta / Yape
+                    </button>
+
+                    <p class="text-[11px] text-center text-zinc-500">
+                        🔒 Transacciones protegidas • Envíos seguros en todo el Perú
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <aside aria-label="Contacto directo por WhatsApp" class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+        <span class="hidden sm:inline-block bg-white text-zinc-900 text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg border border-zinc-200">
+            ¿Dudas con tu talla? Escríbenos 👋
+        </span>
+        <a href="https://wa.me/51999999999?text=Hola%20Aura%20Lima,%20tengo%20consultas%20sobre%20las%20prendas%20y%20env%C3%ADos" target="_blank" rel="noopener noreferrer" class="relative group p-4 rounded-full bg-emerald-500 text-white hover:bg-emerald-600 shadow-2xl hover:scale-110 transition-all flex items-center justify-center" aria-label="Contactar a AURA Lima por WhatsApp">
+            <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-400"></span>
+            </span>
+            <i data-lucide="message-circle" class="w-7 h-7"></i>
+        </a>
+    </aside>
+
+    <!-- TOAST NOTIFICACIÓN -->
+    <div id="toast" class="fixed bottom-6 left-6 z-50 bg-zinc-950 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+        <div>
+            <p id="toastTitle" class="text-xs font-bold">¡Prenda agregada al carrito!</p>
+            <p id="toastDesc" class="text-[11px] text-zinc-400">Revisa tu carrito para finalizar la compra.</p>
+        </div>
+    </div>
+
+    <!-- LOGICA JAVASCRIPT COMPLETA -->
+    <script>
+        // CATÁLOGO DE PRODUCTOS (PRECIOS EN SOLES PERUANOS S/.)
+        const PRODUCTS = [
+            {
+                id: 1,
+                name: "Polo Oversized Pima 50/1 'Chorrillos'",
+                category: "pima",
+                price: 99.00,
+                originalPrice: 129.00,
+                badge: "100% Pima",
+                badgeColor: "bg-amber-100 text-amber-900 border-amber-300",
+                sizes: ["S", "M", "L", "XL"],
+                image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=700&q=80",
+                description: "Caída recta, textura ultra sedosa. No encoge ni decolora."
+            },
+            {
+                id: 2,
+                name: "Vestido Midi Lino Orgánico 'Barranco'",
+                category: "mujer",
+                price: 189.00,
+                originalPrice: null,
+                badge: "Bestseller",
+                badgeColor: "bg-aura-200 text-aura-900 border-aura-300",
+                sizes: ["XS", "S", "M", "L"],
+                image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=700&q=80",
+                description: "Silueta fluida con lazo ajustable, fresco para el verano limeño."
+            },
+            {
+                id: 3,
+                name: "Camisa Cuello Nerú Lino & Algodón",
+                category: "hombre",
+                price: 159.00,
+                originalPrice: 189.00,
+                badge: "-16%",
+                badgeColor: "bg-rose-100 text-rose-800 border-rose-300",
+                sizes: ["S", "M", "L", "XL"],
+                image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80",
+                description: "Corte regular fit en mezcla premium transpirable."
+            },
+            {
+                id: 4,
+                name: "Pantalón Wide-Leg Lino 'San Isidro'",
+                category: "mujer",
+                price: 169.00,
+                originalPrice: null,
+                badge: "Tendencia",
+                badgeColor: "bg-emerald-100 text-emerald-900 border-emerald-300",
+                sizes: ["S", "M", "L"],
+                image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80",
+                description: "Cintura alta elastizada y bolsillos laterales amplios."
+            },
+            {
+                id: 5,
+                name: "Cardigan Grueso Tejido 'Neblina'",
+                category: "abrigos",
+                price: 219.00,
+                originalPrice: 249.00,
+                badge: "Media Estación",
+                badgeColor: "bg-zinc-200 text-zinc-900 border-zinc-400",
+                sizes: ["Única (Oversize)"],
+                image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=700&q=80",
+                description: "Tejido suave para las noches húmedas y frías de la costa."
+            },
+            {
+                id: 6,
+                name: "Top Crop Rib Pima Peinado 'Miraflores'",
+                category: "pima",
+                price: 79.00,
+                originalPrice: 99.00,
+                badge: "100% Pima",
+                badgeColor: "bg-amber-100 text-amber-900 border-amber-300",
+                sizes: ["XS", "S", "M"],
+                image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80",
+                description: "Ajuste elástico suave sin apretar, perfecto para layering."
+            },
+            {
+                id: 7,
+                name: "Casaca Over-Shirt Denim Lavado",
+                category: "abrigos",
+                price: 229.00,
+                originalPrice: null,
+                badge: "Unisex",
+                badgeColor: "bg-blue-100 text-blue-900 border-blue-300",
+                sizes: ["S", "M", "L", "XL"],
+                image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=700&q=80",
+                description: "Denim peruano de 12oz con botones metálicos envejecidos."
+            },
+            {
+                id: 8,
+                name: "Polo Boxy Fit Algodón Pima Pesado",
+                category: "hombre",
+                price: 119.00,
+                originalPrice: 139.00,
+                badge: "Nuevo Drop",
+                badgeColor: "bg-zinc-900 text-white border-zinc-700",
+                sizes: ["S", "M", "L", "XL"],
+                image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=700&q=80",
+                description: "Estructura impecable en cuello alto cerrado y hombros caídos."
+            }
+        ];
+
+        // ESTADO DE LA APLICACIÓN
+        let cart = [];
+        let activeCategory = 'todos';
+
+        // RENDERIZADO DEL CATÁLOGO
+        function renderProducts(category = 'todos') {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = '';
+
+            const filtered = category === 'todos' 
+                ? PRODUCTS 
+                : PRODUCTS.filter(p => p.category === category);
+
+            filtered.forEach(product => {
+                const card = document.createElement('div');
+                card.className = "group bg-white rounded-3xl p-3 border border-zinc-200/80 hover:border-zinc-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between";
+
+                card.innerHTML = `
+                    <div>
+                        <!-- Contenedor Imagen -->
+                        <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-zinc-100 mb-4">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-3 left-3 flex flex-col gap-1.5">
+                                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border shadow-sm ${product.badgeColor}">
+                                    ${product.badge}
+                                </span>
+                            </div>
+
+                            <!-- Botón Favorito / Vista Rápida -->
+                            <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur text-zinc-700 hover:text-rose-600 flex items-center justify-center shadow-md transition-colors" title="Guardar">
+                                <i data-lucide="heart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+
+                        <!-- Info Producto -->
+                        <div class="px-1 space-y-1.5">
+                            <h3 class="font-bold text-sm text-zinc-900 line-clamp-1 group-hover:text-aura-700 transition-colors">
+                                ${product.name}
+                            </h3>
+                            <p class="text-xs text-zinc-500 line-clamp-1">${product.description}</p>
+                            
+                            <!-- Tallas -->
+                            <div class="pt-2">
+                                <p class="text-[10px] uppercase font-bold text-zinc-400 tracking-wider mb-1">Tallas disponibles:</p>
+                                <div class="flex flex-wrap gap-1" id="sizes-${product.id}">
+                                    ${product.sizes.map((size, idx) => `
+                                        <button type="button" onclick="selectProductSize(${product.id}, '${size}', this)" class="size-btn-${product.id} text-[11px] font-semibold px-2.5 py-1 rounded-lg border ${idx === 0 ? 'border-zinc-900 bg-zinc-950 text-white' : 'border-zinc-200 bg-zinc-50 text-zinc-700'} hover:border-zinc-900 transition-colors">
+                                            ${size}
+                                        </button>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Precio y Agregar -->
+                    <div class="mt-4 pt-3 border-t border-zinc-100 flex items-center justify-between px-1">
+                        <div>
+                            <span class="font-serif text-lg font-bold text-zinc-950">S/. ${product.price.toFixed(2)}</span>
+                            ${product.originalPrice ? `<span class="text-xs text-zinc-400 line-through ml-1.5 font-normal">S/. ${product.originalPrice.toFixed(2)}</span>` : ''}
+                        </div>
+                        <button onclick="addToCart(${product.id})" class="px-3.5 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold flex items-center gap-1.5 shadow transition-all hover:scale-105 active:scale-95" title="Añadir a la bolsa">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                            <span class="hidden sm:inline">Agregar</span>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            // Reinicializar iconos Lucide
+            lucide.createIcons();
+        }
+
+        // SELECCIÓN DE TALLA EN CARD
+        const selectedSizes = {};
+        function selectProductSize(productId, size, buttonEl) {
+            selectedSizes[productId] = size;
+            const buttons = document.querySelectorAll(`.size-btn-${productId}`);
+            buttons.forEach(btn => {
+                btn.className = `size-btn-${productId} text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-700 hover:border-zinc-900 transition-colors`;
+            });
+            buttonEl.className = `size-btn-${productId} text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-zinc-900 bg-zinc-950 text-white`;
+        }
+
+        // FILTRADO POR CATEGORÍAS
+        function filterCatalog(category) {
+            activeCategory = category;
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.className = "filter-btn active px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-zinc-950 text-white shadow";
+                } else {
+                    btn.className = "filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-white border border-zinc-200 text-zinc-700 hover:border-zinc-400";
+                }
+            });
+
+            renderProducts(category);
+
+            // Desplazar suavemente a catálogo si se presionó desde otra sección
+            const catSection = document.getElementById('catalogo');
+            if (catSection && window.scrollY < catSection.offsetTop - 100) {
+                catSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // AGREGAR AL CARRITO
+        function addToCart(productId) {
+            const product = PRODUCTS.find(p => p.id === productId);
+            if (!product) return;
+
+            const size = selectedSizes[productId] || product.sizes[0];
+            const existingIndex = cart.findIndex(item => item.id === productId && item.size === size);
+
+            if (existingIndex > -1) {
+                cart[existingIndex].quantity += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    size: size,
+                    quantity: 1
+                });
+            }
+
+            updateCartUI();
+            showToast(`"${product.name}" agregado (Talla ${size})`);
+            openCartDrawer();
+        }
+
+        // ACTUALIZAR INTERFAZ DEL CARRITO
+        function updateCartUI() {
+            const badge = document.getElementById('cartCountBadge');
+            const drawerBadge = document.getElementById('drawerBadgeCount');
+            const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+            badge.innerText = totalCount;
+            drawerBadge.innerText = totalCount;
+
+            const listEl = document.getElementById('cartItemsList');
+            listEl.innerHTML = '';
+
+            let subtotal = 0;
+
+            if (cart.length === 0) {
+                listEl.innerHTML = `
+                    <div class="h-64 flex flex-col items-center justify-center text-center text-zinc-400">
+                        <i data-lucide="shopping-bag" class="w-12 h-12 stroke-1 mb-3 text-zinc-300"></i>
+                        <p class="font-serif text-base text-zinc-700 font-bold">Tu carrito está vacío</p>
+                        <p class="text-xs text-zinc-400 mt-1 max-w-xs">Explora nuestras prendas en 100% Algodón Pima peruano y agrégalas aquí.</p>
+                    </div>
+                `;
+            } else {
+                cart.forEach((item, index) => {
+                    subtotal += item.price * item.quantity;
+                    const itemEl = document.createElement('div');
+                    itemEl.className = "flex gap-3.5 p-3 rounded-2xl bg-zinc-50 border border-zinc-200/80 items-center justify-between";
+                    itemEl.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-20 rounded-xl object-cover shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-bold text-xs text-zinc-900 truncate">${item.name}</h4>
+                            <p class="text-[11px] text-zinc-500 mt-0.5">Talla: <span class="font-semibold text-zinc-800">${item.size}</span></p>
+                            <p class="text-xs font-serif font-bold text-zinc-950 mt-1">S/. ${(item.price * item.quantity).toFixed(2)}</p>
+                            
+                            <!-- Controles Cantidad -->
+                            <div class="flex items-center gap-2 mt-2">
+                                <button onclick="changeQty(${index}, -1)" class="w-6 h-6 rounded-md bg-white border border-zinc-200 flex items-center justify-center text-xs font-bold hover:bg-zinc-100">-</button>
+                                <span class="text-xs font-semibold text-zinc-800">${item.quantity}</span>
+                                <button onclick="changeQty(${index}, 1)" class="w-6 h-6 rounded-md bg-white border border-zinc-200 flex items-center justify-center text-xs font-bold hover:bg-zinc-100">+</button>
+                            </div>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-zinc-400 hover:text-rose-600 p-1.5" title="Eliminar">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    `;
+                    listEl.appendChild(itemEl);
+                });
+            }
+
+            // Subtotales y Barra de Envío Gratis (Umbral S/. 199 en Lima)
+            document.getElementById('cartSubtotal').innerText = `S/. ${subtotal.toFixed(2)}`;
+            
+            const freeShippingThreshold = 199.00;
+            const freeShippingText = document.getElementById('freeShippingText');
+            const cartShippingText = document.getElementById('cartShippingText');
+
+            if (subtotal >= freeShippingThreshold) {
+                freeShippingText.innerHTML = `🎉 <strong>¡Felicidades!</strong> Tienes <strong>ENVÍO GRATIS</strong> en Lima`;
+                cartShippingText.innerHTML = `<span class="text-emerald-700 font-bold">¡GRATIS!</span>`;
+                document.getElementById('cartTotal').innerText = `S/. ${subtotal.toFixed(2)}`;
+            } else if (subtotal > 0) {
+                const diff = (freeShippingThreshold - subtotal).toFixed(2);
+                freeShippingText.innerHTML = `Faltan <strong>S/. ${diff}</strong> para envío gratis en Lima`;
+                cartShippingText.innerText = "S/. 12.00 (Lima Metropolitana)";
+                document.getElementById('cartTotal').innerText = `S/. ${(subtotal + 12).toFixed(2)}`;
+            } else {
+                freeShippingText.innerText = "Envío GRATIS en Lima por compras mayores a S/. 199";
+                cartShippingText.innerText = "Calculado al checkout";
+                document.getElementById('cartTotal').innerText = `S/. 0.00`;
+            }
+
+            lucide.createIcons();
+        }
+
+        function changeQty(index, delta) {
+            if (cart[index]) {
+                cart[index].quantity += delta;
+                if (cart[index].quantity <= 0) {
+                    cart.splice(index, 1);
+                }
+                updateCartUI();
+            }
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        // APERTURA Y CIERRE DE DRAWER
+        const cartModal = document.getElementById('cartModal');
+        const cartPanel = document.getElementById('cartPanel');
+        const cartBackdrop = document.getElementById('cartBackdrop');
+
+        function openCartDrawer() {
+            cartModal.classList.remove('pointer-events-none', 'opacity-0');
+            cartModal.classList.add('opacity-100');
+            cartPanel.classList.remove('translate-x-full');
+            cartPanel.classList.add('translate-x-0');
+        }
+
+        function closeCartDrawer() {
+            cartPanel.classList.remove('translate-x-0');
+            cartPanel.classList.add('translate-x-full');
+            setTimeout(() => {
+                cartModal.classList.remove('opacity-100');
+                cartModal.classList.add('pointer-events-none', 'opacity-0');
+            }, 200);
+        }
+
+        document.getElementById('openCartBtn').addEventListener('click', openCartDrawer);
+        document.getElementById('closeCartBtn').addEventListener('click', closeCartDrawer);
+        cartBackdrop.addEventListener('click', closeCartDrawer);
+
+        // CHECKOUT POR WHATSAPP CON MENSAJE PRE-ARMADO
+        function checkoutViaWhatsApp() {
+            if (cart.length === 0) {
+                alert("Tu carrito está vacío. Agrega al menos una prenda antes de confirmar.");
+                return;
+            }
+
+            let subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            let shipping = subtotal >= 199 ? 0 : 12;
+            let total = subtotal + shipping;
+
+            let msg = `¡Hola *AURA LIMA*! Deseo realizar el siguiente pedido desde la web:%0A%0A`;
+            
+            cart.forEach((item, i) => {
+                msg += `• *${item.name}* (Talla: ${item.size}) x${item.quantity} = S/. ${(item.price * item.quantity).toFixed(2)}%0A`;
+            });
+
+            msg += `%0A*Subtotal:* S/. ${subtotal.toFixed(2)}`;
+            msg += `%0A*Envío Lima:* ${shipping === 0 ? 'GRATIS' : 'S/. 12.00'}`;
+            msg += `%0A*TOTAL ESTIMADO:* S/. ${total.toFixed(2)}%0A%0A`;
+            msg += `Deseo pagar mediante (Yape / Plin / Tarjeta) y coordinar el envío a mi distrito.`;
+
+            const phone = "51999999999";
+            window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+        }
+
+        function checkoutDirecto() {
+            if (cart.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+            alert("Redirigiendo a pasarela de pagos seguros (Niubiz / Izipay / Yape)...");
+        }
+
+        // TOAST NOTIFICACIÓN
+        function showToast(title, desc = "Revisa tu bolsa de compras") {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastTitle').innerText = title;
+            document.getElementById('toastDesc').innerText = desc;
+
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        // FORMULARIO NEWSLETTER
+        function handleNewsletter(e) {
+            e.preventDefault();
+            document.getElementById('newsletterForm').reset();
+            const msg = document.getElementById('newsletterMsg');
+            msg.classList.remove('hidden');
+            setTimeout(() => msg.classList.add('hidden'), 5000);
+        }
+
+        // MENÚ MÓVIL
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // INICIALIZACIÓN
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts('todos');
+            updateCartUI();
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
